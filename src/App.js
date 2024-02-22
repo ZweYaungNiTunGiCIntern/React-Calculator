@@ -16,12 +16,13 @@ function App() {
   }
   return(
     <div className="container text-center mt-5">
-      <h3 className="text-center mt-3 pt-3">Calculator</h3>
+      
       <div className="card mx-auto" style={{ width: 450, backgroundColor: '#f8f9fa', border: 'none', borderRadius: '10px', boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.2)' }}>
+      <h3 className="text-center mt-3 pt-3">Calculator</h3>
         <div className="card-body">
           <div className="row mt-4 mb-4">
             <div className="col-md-6">
-              <label>First Number</label>
+              <label>Enter First Number</label>
             </div>
             <div className="col-md-6">
               <input type="text" className="form-control" value={num1} onChange={handleNum1Change} />
@@ -29,7 +30,7 @@ function App() {
           </div>
           <div className="row mt-4 mb-4">
             <div className="col-md-6">
-              <label>Second Number</label>
+              <label>Enter Second Number</label>
             </div>
             <div className="col-md-6">
               <input type="text" className="form-control" value={num2} onChange={handleNum2Change} />
