@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
-  const [num1,setNum1] = useState(0);
-  const [num2,setNum2] = useState(0);
-  const [sum,setSum] = useState(0);
+  const [num1,setNum1] = useState();
+  const [num2,setNum2] = useState();
+  const [sum,setSum] = useState();
   const handleNum1Change = (e) =>{
     setNum1(Number(e.target.value));
   }
@@ -12,7 +12,7 @@ function App() {
     setNum2(Number(e.target.value));
   }
   const calculateSum = () =>{
-    setSum(num1+num2)
+    setSum(num1+num2);
   }
   return(
     <div className="container text-center mt-5">
@@ -25,7 +25,7 @@ function App() {
               <label>Enter First Number</label>
             </div>
             <div className="col-md-6">
-              <input type="text" className="form-control" value={num1} onChange={handleNum1Change} />
+              <input type="number" className="form-control" value={num1} onChange={handleNum1Change} />
             </div>
           </div>
           <div className="row mt-4 mb-4">
@@ -33,7 +33,7 @@ function App() {
               <label>Enter Second Number</label>
             </div>
             <div className="col-md-6">
-              <input type="text" className="form-control" value={num2} onChange={handleNum2Change} />
+              <input type="number" className="form-control" value={num2} onChange={handleNum2Change} />
             </div>
           </div>
           <div className="mt-4 mb-4">
