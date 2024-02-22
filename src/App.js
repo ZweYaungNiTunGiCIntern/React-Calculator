@@ -15,31 +15,30 @@ function App() {
     setSum(num1+num2)
   }
   return(
-    <div className="container text-center">
+    <div className="container text-center mt-5">
       <h3 className="text-center mt-3 pt-3">Calculator</h3>
-      <div className="card mx-auto" style={{ width: 450 }}>
+      <div className="card mx-auto" style={{ width: 450, backgroundColor: '#f8f9fa', border: 'none', borderRadius: '10px', boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.2)' }}>
         <div className="card-body">
-          <div className="row mt-5 mb-5 pt-5 pb-5">
+          <div className="row mt-4 mb-4">
             <div className="col-md-6">
               <label>First Number</label>
             </div>
             <div className="col-md-6">
-              <input type="text" value={num1} onChange={handleNum1Change} />
+              <input type="text" className="form-control" value={num1} onChange={handleNum1Change} />
             </div>
           </div>
-          <div className="row mt-5 mb-5 pt-5 pb-5">
+          <div className="row mt-4 mb-4">
             <div className="col-md-6">
               <label>Second Number</label>
             </div>
             <div className="col-md-6">
-              <input type="text" value={num2} onChange={handleNum2Change} />
+              <input type="text" className="form-control" value={num2} onChange={handleNum2Change} />
             </div>
           </div>
-          <div className="mt-5 mb-5">
-          <button onClick={calculateSum}>Calculate Sum</button>
+          <div className="mt-4 mb-4">
+            <button className="btn btn-primary" onClick={calculateSum}>Calculate Sum</button>
           </div>
-          
-          <h2>Sum: {sum}</h2>
+          <h2 className="mt-4">Sum: {sum}</h2>
         </div>
       </div>
     </div>
